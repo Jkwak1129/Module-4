@@ -2,7 +2,9 @@
 title: "04_Main"
 author: "Sami Marzougui"
 date: "3/16/2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -50,12 +52,5 @@ pred <- tibble(date = dat$date,
                pred = pred_logistic(fit_pars, dat$doy))
 
 ## Visualize model and data
-plot_phenocam(dat, pred = pred)```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+plot_phenocam(dat, pred = pred)
 ```
